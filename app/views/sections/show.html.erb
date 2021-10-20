@@ -1,0 +1,17 @@
+<div class="container bg_white">
+	<div class="row">
+		<div class="col12"><h1>Sections#show</h1></div>
+	</div>
+	<div class="row">
+		<ul>
+		  <li>Title: <%= @sec.title %></li>
+		  <li>ID: <%= @sec.id %></li>
+		  <li>Visible: <%= @sec.visible %></li>
+		  <li>Position: <%= @sec.position %></li>
+		  <li>Location: <%= @sec.location %></li>
+		</ul>
+	</div>
+	<div class="row"><%= link_to "Edit", edit_section_path(@sec) %> | <%= link_to "Destroy", section_path(@sec),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } %></div>
+</div>

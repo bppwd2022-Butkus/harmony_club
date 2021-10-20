@@ -1,0 +1,17 @@
+<div class="container bg_white">
+	<div class="row">
+		<div class="col12"><h1>Sections#index</h1></div>
+	</div>
+	<div class="row">
+		<ul>
+		  <% @sections.each do |sec| %>
+		    <li>
+		      <%= link_to sec.title, sec %>
+		    </li>
+		  <% end %>
+		</ul>
+	</div>
+	<div class="row">
+		<%= link_to "new", new_section_path%>
+	</div>
+</div>

@@ -1,0 +1,20 @@
+<div class="container bg_white">
+	<div class="row">
+		<div class="col12"><h1>Sections#new</h1></div>
+	</div>
+	<div class="row">
+		<%= form_with model: @sec do |form| %>
+		  <div>
+		    <%= form.label :title %><br>
+		    <%= form.text_field :title %>
+		  </div>
+		  <% @sec.errors.full_messages_for(:title).each do |message| %>
+      	  <div><%= message %></div>
+      	  <% end %>
+
+		  <div>
+		    <%= form.submit %>
+		  </div>
+		<% end %>
+	</div>
+</div>
