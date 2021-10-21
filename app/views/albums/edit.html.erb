@@ -1,6 +1,15 @@
-<h1>Editing Album</h1>
+<div class="container bg_white p-5">
 
-<%= render 'form', album: @album %>
+  <div class="row">
+  	<div class="col-12">
+		<h1>Editing Album</h1>
 
-<%= link_to 'Show', @album %> |
-<%= link_to 'Back', albums_path %>
+		<%= render 'form', album: @album %>
+
+		<%= link_to 'Show', @album , class: "btn btn-dark" %> |
+		<%= link_to 'Back', albums_path , class: "btn btn-dark" %>
+
+  	</div>
+  </div>
+
+</div>

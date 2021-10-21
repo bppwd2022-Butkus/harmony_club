@@ -11,22 +11,22 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :album_id %>
+  <div class="field my-3">
+    <%= form.label :album_id , class: "form-label"%>
     <%= form.number_field :album_id %>
   </div>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+  <div class="field my-3">
+    <%= form.label :title , class: "form-label"%>
+    <%= form.text_field :title , class: "form-control"%>
   </div>
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description %>
+  <div class="field my-3">
+    <%= form.label :description , class: "form-label"%>
+    <%= form.text_area :description, class: "form-control" %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="actions my-3">
+    <%= form.submit  class:  "btn btn-dark" %>
   </div>
 <% end %>

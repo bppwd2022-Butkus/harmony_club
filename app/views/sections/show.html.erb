@@ -1,24 +1,32 @@
-<p id="notice"><%= notice %></p>
+<div class="container bg_white p-5">
 
-<p>
-  <strong>Location:</strong>
-  <%= @section.location %>
-</p>
+  <div clas="row">
+    <div class="col-12">
+      <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @section.title %>
-</p>
+      <p>
+        <strong>Location:</strong>
+        <%= @section.location %>
+      </p>
 
-<p>
-  <strong>Visible:</strong>
-  <%= @section.visible %>
-</p>
+      <p>
+        <strong>Title:</strong>
+        <%= @section.title %>
+      </p>
 
-<p>
-  <strong>Position:</strong>
-  <%= @section.position %>
-</p>
+      <p>
+        <strong>Visible:</strong>
+        <%= @section.visible %>
+      </p>
 
-<%= link_to 'Edit', edit_section_path(@section) %> |
-<%= link_to 'Back', sections_path %>
+      <p>
+        <strong>Position:</strong>
+        <%= @section.position %>
+      </p>
+
+      <%= link_to 'Edit', edit_section_path(@section), class: "btn btn-dark" %> |
+      <%= link_to 'Back', sections_path, class: "btn btn-dark" %>
+    </div>
+  </div>
+
+</div>

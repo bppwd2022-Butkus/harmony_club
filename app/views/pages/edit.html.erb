@@ -1,6 +1,14 @@
-<h1>Editing Page</h1>
+<div class="container bg_white p-5">
 
-<%= render 'form', page: @page %>
+  <div class="row">
+  	<div class="col-12">
+  	  <h1>Editing Page</h1>
 
-<%= link_to 'Show', @page %> |
-<%= link_to 'Back', pages_path %>
+		<%= render 'form', page: @page %>
+
+		<%= link_to 'Show', @page , class: "btn btn-dark" %> |
+		<%= link_to 'Back', pages_path , class: "btn btn-dark" %>
+  	</div>
+  </div>
+
+</div>

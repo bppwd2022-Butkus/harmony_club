@@ -11,27 +11,27 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :location %>
-    <%= form.text_field :location %>
+  <div class="field my-3">
+    <%= form.label :location, class: "form-label" %>
+    <%= form.text_field :location, class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+  <div class="field my-3">
+    <%= form.label :title, class: "form-label" %>
+    <%= form.text_field :title, class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :visible %>
-    <%= form.check_box :visible %>
+  <div class="field my-3">
+    <%= form.label :visible, class: "form-check-label"%>
+    <%= form.check_box :visible, class: "form-check-input" %>
   </div>
 
-  <div class="field">
-    <%= form.label :position %>
-    <%= form.number_field :position %>
+  <div class="field my-3">
+    <%= form.label :position, class: "form-label"%>
+    <%= form.number_field :position, class: "form-control" %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="actions my-3">
+    <%= form.submit class:  "btn btn-dark" %>
   </div>
 <% end %>

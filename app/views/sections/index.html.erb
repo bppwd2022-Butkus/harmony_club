@@ -1,33 +1,43 @@
-<p id="notice"><%= notice %></p>
+<div class="container bg_white p-5">
 
-<h1>Sections</h1>
+  <p id="notice"><%= notice %></p>
 
-<table>
-  <thead>
-    <tr>
-      <th>Location</th>
-      <th>Title</th>
-      <th>Visible</th>
-      <th>Position</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <div class="row">
+    
+    <h1 class=col-12>Sections</h1>
 
-  <tbody>
-    <% @sections.each do |section| %>
-      <tr>
-        <td><%= section.location %></td>
-        <td><%= section.title %></td>
-        <td><%= section.visible %></td>
-        <td><%= section.position %></td>
-        <td><%= link_to 'Show', section %></td>
-        <td><%= link_to 'Edit', edit_section_path(section) %></td>
-        <td><%= link_to 'Destroy', section, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+    <div class="col-12" text center>
+      <table>
+        <thead>
+          <tr>
+            <th class="pe-3" >Location</th>
+            <th class="pe-3" >Title</th>
+            <th class="pe-3" >Visible</th>
+            <th class="pe-3" >Position</th>
+            <th colspan="3"></th>
+          </tr>
+        </thead>
 
-<br>
+        <tbody>
+          <% @sections.each do |section| %>
+            <tr class="">
+              <td class="pt-3 pe-3" ><%= section.location %></td>
+              <td class="pt-3 pe-3" ><%= section.title %></td>
+              <td class="pt-3 pe-3" ><%= section.visible %></td>
+              <td class="pt-3 pe-3" ><%= section.position %></td>
+              <td class="pt-3 pe-3" ><%= link_to 'Show', section , class: "btn btn-dark" %></td>
+              <td class="pt-3 pe-3" ><%= link_to 'Edit', edit_section_path(section), class: "btn btn-dark" %></td>
+              <td class="pt-3 pe-3" ><%= link_to 'Destroy', section, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-dark" %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
 
-<%= link_to 'New Section', new_section_path %>
+      <br>
+
+      <%= link_to 'New Section', new_section_path, class: "btn btn-dark" %>
+    </div>
+
+  </div>
+
+</div>
