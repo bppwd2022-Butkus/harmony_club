@@ -1,51 +1,39 @@
-<div class="container bg_white p-0">
-	<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-	  <div class="carousel-indicators">
-	    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-	    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-	    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-	  </div>
-	  <div class="carousel-inner">
-	    <div class="carousel-item active">
-	      <%= image_tag "slide_show.png", class: "bg_white w-100" %>
-	      <div class="carousel-caption d-none d-md-block">
-	        <h5>First slide label</h5>
-	        <p>Some representative placeholder content for the first slide.</p>
-	      </div>
-	    </div>
-	    <div class="carousel-item">
-	      <%= image_tag "slide_show.png", class: "bg_white w-100" %>
-	      <div class="carousel-caption d-none d-md-block">
-	        <h5>Second slide label</h5>
-	        <p>Some representative placeholder content for the second slide.</p>
-	      </div>
-	    </div>
-	    <div class="carousel-item">
-	      <%= image_tag "slide_show.png", class: "bg_white w-100" %>
-	      <div class="carousel-caption d-none d-md-block">
-	        <h5>Third slide label</h5>
-	        <p>Some representative placeholder content for the third slide.</p>
-	      </div>
-	    </div>
-	  </div>
-	  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-	    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-	    <span class="visually-hidden">Previous</span>
-	  </button>
-	  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-	    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-	    <span class="visually-hidden">Next</span>
-	  </button>
-	</div>
+<p id="notice"><%= notice %></p>
 
+<p>
+  <strong>Title:</strong>
+  <%= @page.title %>
+</p>
 
-	<div clas="row">
-		<div class="col-11 mx-auto text-center my-4"><h2>Welcome to the new Harmony Club website!</h2></div>
-		<div class="col-11 mx-auto mb-4">
-			<p>&emsp;The Harmony Club of Worcester, Massachusetts is a fraternal organization of men and women of French descent that was organized in 1925. The Club holds monthly meetings at O'Connor's Restaurant in Worcester with guest speakers. The Club also sponsors other cultural/social/sport events, tours, adult and children's Christmas parties. Members can participate in our golf league that takes place at Bed Rock Golf Club in Rutland, MA.</p>
-		</div>
-		<div class="col-11 mx-auto mb-0 pb-5">
-			<p>&emsp;Our major fund raiser is our "Bob Picard Memorial Golf Tournament" that is held at the Leicester Country Club in Leicester, MA every September. The proceeds from this tournament are the sole funding of the scholarship and civic awards.</p>
-		</div>
-	</div>
-</div>
+<p>
+  <strong>Section:</strong>
+  <%= @page.section_id %>
+</p>
+
+<p>
+  <strong>Page type:</strong>
+  <%= @page.page_type %>
+</p>
+
+<p>
+  <strong>Permalink:</strong>
+  <%= @page.permalink %>
+</p>
+
+<p>
+  <strong>Visible:</strong>
+  <%= @page.visible %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @page.position %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @page.content %>
+</p>
+
+<%= link_to 'Edit', edit_page_path(@page) %> |
+<%= link_to 'Back', pages_path %>

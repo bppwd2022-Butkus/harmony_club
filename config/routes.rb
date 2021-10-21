@@ -1,8 +1,14 @@
 Rails.application.routes.draw do
   
+  resources :sponsors
+  resources :photos
+  resources :albums
+  resources :events
+  resources :pages
+  get 'site/home'
+  devise_for :members
   resources :sections
 
-  get 'pages/show'
-  root 'pages#show'
+  root 'site#home'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
