@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   resources :events
   resources :pages
   get 'site/home'
+  get 'site/event'
+  get 'site/page'
   devise_for :members
   resources :sections
 

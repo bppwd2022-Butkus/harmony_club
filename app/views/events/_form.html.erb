@@ -17,8 +17,15 @@
   </div>
 
   <div class="field my-3">
+    <%= form.label :photo %>
+    <%= form.file_field :photo %>
+  </div>
+
+  <div class="field my-3">
     <%= form.label :details , class: "form-label"%>
-    <%= form.text_area :details, class: "form-control" %>
+    <%= form.text_area :details, class: "form-control tinymce" %>
+    <%= tinymce %>
+
   </div>
 
   <div class="actions my-3">

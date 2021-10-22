@@ -43,7 +43,13 @@
 
   <div class="field my-3">
     <%= form.label :content , class: "form-label"%>
-    <%= form.text_area :content, class: "form-control" %>
+    <%= form.text_area :content, class: "form-control tinymce" %>
+  </div>
+
+  <div class="field my-3">
+    <%= form.label :destination , class: "form-label"%>
+    <%= form.text_area :destination, class: "form-control" %>
+    <%= tinymce %>
   </div>
 
   <div class="actions my-3">

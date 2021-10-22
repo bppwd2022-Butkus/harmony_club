@@ -23,7 +23,7 @@
               <td class="pt-3 pe-3"><%= event.details %></td>
               <td class="pt-3 pe-3"><%= link_to 'Show', event,  class: "btn btn-dark"  %></td>
               <td class="pt-3 pe-3"><%= link_to 'Edit', edit_event_path(event),  class: "btn btn-dark"  %></td>
-              <td class="pt-3 pe-3"><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?',  class: "btn btn-dark"  } %></td>
+              <td class="pt-3 pe-3"><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?'  },  class: "btn btn-dark" %></td>
             </tr>
           <% end %>
         </tbody>

@@ -41,6 +41,11 @@
         <%= @page.content %>
       </p>
 
+      <p>
+        <strong>Destination:</strong>
+        <%= @page.destination %>
+      </p>
+
       <%= link_to 'Edit', edit_page_path(@page), class: "btn btn-dark"  %> |
       <%= link_to 'Back', pages_path , class: "btn btn-dark" %>
     </div>

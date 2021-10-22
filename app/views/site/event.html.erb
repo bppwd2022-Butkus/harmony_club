@@ -1,0 +1,11 @@
+<div class="container bg_white p-0">
+	
+	<% @events.each do |event|%>
+		<div clas="row">
+			<div class="col-12"><h1> <%= event.title %> </h1></div>
+			<div class="col-3"> <%= image_tag event.photo, class: "w-100" %> </div>
+			<div class="col-8"> <%=  raw event.details %>  </h2>
+		</div>
+	<% end %>
+	
+</div>

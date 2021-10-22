@@ -8,14 +8,15 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+     <%= tinymce_assets %>
+    <script type="text/javascript" src="/assets/tinymce.js"></script>
+
   
   </head>
 
   <body>
 
     <header>
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
 
       <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
@@ -33,10 +34,12 @@
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 
-                    <% sec.pages.each do |pages| %>
-
-                      <li><%= link_to pages.title, site_home_url, class: "dropdown-item" %></li>
-
+                    <% sec.pages.each do |page| %>
+                      <% if page.page_type == "Basic Page" %>
+                        <li><%= link_to page.title, site_page_path(id: page.id), class: "dropdown-item" %></li>
+                      <% elsif page.page_type == "Internal URL" %>
+                        <li><%= link_to page.title, page.destination, class: "dropdown-item" %></li>
+                      <% end %>
                     <% end %>
 
                   </ul>
@@ -45,6 +48,8 @@
 
             </ul>
           </div>
+          <p class="notice"><%= notice %></p>
+          <p class="alert"><%= alert %></p>
         </div>
       </nav>
     </header>
