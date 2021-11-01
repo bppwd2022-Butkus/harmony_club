@@ -9,6 +9,10 @@
         <%= @sponsor.title %>
       </p>
 
+      <% if @sponsor.photo.attached?%>
+        <%= image_tag @sponsor.photo %>
+      <% end %>
+
       <p>
         <strong>Website:</strong>
         <%= @sponsor.website %>

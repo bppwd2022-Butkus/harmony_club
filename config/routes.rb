@@ -8,6 +8,9 @@ Rails.application.routes.draw do
   get 'site/home'
   get 'site/event'
   get 'site/page'
+  get 'site/photo'
+  get 'site/sponsor'
+  get 'site/contact'
   devise_for :members
   resources :sections
 

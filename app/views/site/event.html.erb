@@ -1,7 +1,7 @@
 <div class="container bg_white p-0">
 	
 	<% @events.each do |event|%>
-		<div class="row pt-3 mb-3 justify-content-center">
+		<div class="row py-3 justify-content-center">
 			<div class="col-11 border-top"><h1> <%= event.title %> </h1></div>
 			<div class="col-3"> <%= image_tag event.photo, class: "w-100" %> </div>
 			<div class="col-8"> <%=  raw event.details %>  </h2>

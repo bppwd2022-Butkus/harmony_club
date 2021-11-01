@@ -16,6 +16,10 @@
         <%= @photo.title %>
       </p>
 
+      <% if @photo.photo.attached?%>
+        <%= image_tag @photo.photo %>
+      <% end %>
+
       <p>
         <strong>Description:</strong>
         <%= @photo.description %>

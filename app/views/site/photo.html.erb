@@ -1,0 +1,25 @@
+<div class="container bg_white p-0">
+	
+	<div class="accordion" id="accordionExample">
+	  
+		<% @albums.each do |album|%>
+			<div class="accordion-item">
+			    <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+			      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse<%= album.id %>" aria-expanded="true" aria-controls="panelsStayOpen-collapse<%= album.id %>">
+			        <%= album.title %>
+			      </button>
+			    </h2>
+			    <div id="panelsStayOpen-collapse<%= album.id %>" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+			      <div class="accordion-body row">
+			        <div class="col-12"><%= album.description %></div>
+			        <% album.photos.each do |pho| %>
+			        	<div class="col-lg-3 col-md-6 col-12 mx-auto p-5 width-100"><%= image_tag pho.photo, class: "w-100" %></div>
+			        <% end %>
+			      </div>
+			    </div>
+			</div>
+		<% end %>
+
+	</div>
+
+</div>
